@@ -19,6 +19,11 @@ http:
   auth: inherit
 
 runtime:
+  variables:
+    - name: newLogin
+      value: hi
+    - name: newPassword
+      value: COP4331
   scripts:
     - type: before-request
       code: |-
@@ -51,6 +56,6 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
-docs: |-
-  Creates a new account. Does not change the logged-in user for the requests that follow.
+docs: Creates a new account. Does not change the logged-in user for the requests that follow.
